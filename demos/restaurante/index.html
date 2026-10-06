@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restaurante El Sabor — Reserva tu mesa</title>
+<meta name="description" content="Cocina casera con ingredientes frescos. Reserva tu mesa en El Sabor." />
+<style>
+  :root { --bg:#fffdf8; --ink:#241a12; --muted:#6f6157; --accent:#d9480f; --gold:#f0a500; --radius:16px; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; }
+  a { text-decoration:none; color:inherit; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+
+  nav { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+  .logo { font-weight:800; font-size:1.25rem; }
+  .logo span { color:var(--accent); }
+  .nav a:not(.btn) { margin-left:22px; color:var(--muted); font-size:.95rem; }
+  .nav a:not(.btn):hover { color:var(--ink); }
+
+  .btn { display:inline-block; background:var(--accent); color:#fff; padding:12px 26px; border-radius:10px; font-weight:700; transition:.2s; }
+  .btn:hover { filter:brightness(1.08); transform:translateY(-2px); }
+  .btn-ghost { background:transparent; border:2px solid var(--ink); color:var(--ink); }
+  .btn-small { padding:9px 20px; font-size:.9rem; }
+
+  .hero { text-align:center; padding:70px 0 60px; background:
+      radial-gradient(600px 300px at 50% 0, rgba(240,165,0,.18), transparent 70%); }
+  .hero h1 { font-size:clamp(2.2rem,5vw,3.4rem); line-height:1.15; margin-bottom:16px; }
+  .hero h1 em { color:var(--accent); font-style:normal; }
+  .hero p { color:var(--muted); max-width:560px; margin:0 auto 30px; font-size:1.1rem; }
+  .hero-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  section { padding:64px 0; }
+  h2 { font-size:2rem; text-align:center; margin-bottom:8px; }
+  .sub { text-align:center; color:var(--muted); margin-bottom:38px; }
+
+  .grid { display:grid; gap:22px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+  .card { background:#fff; border:1px solid #efe7dd; border-radius:var(--radius); padding:26px; box-shadow:0 4px 18px rgba(0,0,0,.04); }
+  .card .ico { font-size:1.8rem; margin-bottom:10px; }
+  .card h3 { margin-bottom:6px; }
+  .card p { color:var(--muted); font-size:.95rem; }
+
+  .menu-item { display:flex; justify-content:space-between; gap:12px; border-bottom:1px dashed #e6ddd2; padding:14px 0; }
+  .menu-item strong { color:var(--accent); white-space:nowrap; }
+  .menu-item span { color:var(--muted); font-size:.92rem; display:block; }
+
+  .band { background:var(--ink); color:#fff; text-align:center; border-radius:var(--radius); padding:48px 24px; }
+  .band p { color:#cfc4b8; margin-bottom:24px; }
+
+  .gal { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  .ph { height:180px; border-radius:var(--radius); display:grid; place-items:center; color:#fff; font-weight:700; letter-spacing:1px; }
+  .ph:nth-child(1){background:linear-gradient(135deg,#d9480f,#f0a500);}
+  .ph:nth-child(2){background:linear-gradient(135deg,#2f9e44,#94d82d);}
+  .ph:nth-child(3){background:linear-gradient(135deg,#5f3dc4,#7048e8);}
+
+  .review { background:#fff; border-radius:var(--radius); padding:24px; border:1px solid #efe7dd; }
+  .review .stars { color:var(--gold); letter-spacing:2px; }
+  .review p { font-size:.95rem; margin:8px 0; }
+  .review small { color:var(--muted); }
+
+  footer { border-top:1px solid #efe7dd; padding:34px 0; text-align:center; color:var(--muted); font-size:.9rem; }
+  footer .hours { margin-bottom:10px; }
+  @media (max-width:720px){ .nav a:not(.btn){ display:none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">El Sabor<span>.</span></div>
+    <div class="nav">
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#reserva">Reservas</a>
+      <a href="#reserva" class="btn btn-small">Reservar mesa</a>
+    </div>
+  </nav>
+</div>
+
+<header class="hero wrap">
+  <h1>Cocina casera,<br /><em>hecha con cariño</em></h1>
+  <p>Ingredientes frescos del mercado, recetas de siempre y un lugar para reunir a la familia.</p>
+  <div class="hero-actions">
+    <a href="#reserva" class="btn">Reservar mesa</a>
+    <a href="#menu" class="btn btn-ghost">Ver menú</a>
+  </div>
+</header>
+
+<section id="menu" class="wrap">
+  <h2>Nuestro menú</h2>
+  <p class="sub">Platos del día, todos preparados al momento</p>
+  <div class="grid">
+    <div class="card">
+      <div class="ico">🍲</div>
+      <div class="menu-item"><div><strong>Sopa del día</strong><span>Variable cada mañana</span></div><strong>$4</strong></div>
+      <div class="menu-item"><div><strong>Bandeja típica</strong><span>Carne, arroz, huevo, plátano</span></div><strong>$8</strong></div>
+      <div class="menu-item"><div><strong>Pasta de la casa</strong><span>Salsa de la abuela</span></div><strong>$7</strong></div>
+    </div>
+    <div class="card">
+      <div class="ico">🥗</div>
+      <div class="menu-item"><div><strong>Ensalada fresca</strong><span>Verduras del día</span></div><strong>$5</strong></div>
+      <div class="menu-item"><div><strong>Casado completo</strong><span>El favorito de la casa</span></div><strong>$9</strong></div>
+      <div class="menu-item"><div><strong>Postre casero</strong><span>Pregunta el de hoy</span></div><strong>$3</strong></div>
+    </div>
+    <div class="card">
+      <div class="ico">🥤</div>
+      <div class="menu-item"><div><strong>Jugo natural</strong><span>Fruta de temporada</span></div><strong>$3</strong></div>
+      <div class="menu-item"><div><strong>Café de origen</strong><span>Tostado local</span></div><strong>$2</strong></div>
+      <div class="menu-item"><div><strong>Limonada de la casa</strong><span>Con hierbabuena</span></div><strong>$3</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros" class="wrap">
+  <h2>Así se siente El Sabor</h2>
+  <p class="sub">Un espacio cálido para comer bien y quedarse un rato más</p>
+  <div class="gal">
+    <div class="ph">COMEDOR</div>
+    <div class="ph">COCINA</div>
+    <div class="ph">TERRAZA</div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>“La bandeja es igual a la de mi abuela. Volvimos tres veces esta semana.”</p>
+      <small>— María G.</small>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>“Atención rapidísima y el lugar impecable. Ideal para ir con niños.”</p>
+      <small>— Carlos R.</small>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>“El café y el postre del día son imperdibles.”</p>
+      <small>— Lucía P.</small>
+    </div>
+  </div>
+</section>
+
+<section id="reserva" class="wrap">
+  <div class="band">
+    <h2 style="color:#fff">¿Vienes hoy?</h2>
+    <p>Reserva tu mesa y te la tenemos lista. También hacemos pedidos para llevar.</p>
+    <a class="btn" href="tel:+50600000000">📞 Reservar: 0000-0000</a>
+  </div>
+</section>
+
+<footer>
+  <div class="hours"><strong>Horario:</strong> Lun–Sáb 11:00–21:00 · Dom 11:00–16:00</div>
+  <div>Av. Central 123, San José · El Sabor © 2026</div>
+</footer>
+
+</body>
+</html>

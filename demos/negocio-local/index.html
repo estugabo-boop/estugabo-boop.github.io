@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tu Negocio — Servicios profesionales a tu alcance</title>
+<meta name="description" content="Sitio web de ejemplo para negocios locales: servicios, precios y contacto." />
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --border:#334155; --text:#e2e8f0; --muted:#94a3b8; --accent:#22d3ee; --accent2:#818cf8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+  a { text-decoration:none; color:inherit; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+
+  nav { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+  .logo { font-weight:800; font-size:1.2rem; }
+  .logo span { color:var(--accent); }
+  .nav a:not(.btn) { margin-left:20px; color:var(--muted); font-size:.95rem; }
+  .nav a:not(.btn):hover { color:var(--text); }
+
+  .btn { display:inline-block; background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#0f172a; font-weight:700; padding:12px 26px; border-radius:10px; transition:.2s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-ghost { background:transparent; border:1px solid var(--border); color:var(--text); font-weight:600; }
+  .btn-small { padding:9px 18px; font-size:.9rem; }
+
+  .hero { text-align:center; padding:80px 0 70px;
+    background:radial-gradient(700px 320px at 50% -10%, rgba(34,211,238,.15), transparent 70%); }
+  .pill { display:inline-block; font-size:.8rem; color:var(--accent); border:1px solid var(--border); background:var(--card); padding:6px 14px; border-radius:999px; margin-bottom:20px; }
+  .hero h1 { font-size:clamp(2.1rem,5vw,3.3rem); line-height:1.15; margin-bottom:16px; }
+  .hero h1 em { font-style:normal; color:var(--accent); }
+  .hero p { color:var(--muted); max-width:600px; margin:0 auto 30px; font-size:1.08rem; }
+  .hero-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  section { padding:66px 0; }
+  h2 { font-size:2rem; text-align:center; margin-bottom:8px; }
+  .sub { text-align:center; color:var(--muted); margin-bottom:38px; }
+
+  .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px; transition:.2s; }
+  .card:hover { transform:translateY(-4px); border-color:var(--accent); }
+  .card .ico { font-size:1.7rem; margin-bottom:12px; }
+  .card h3 { margin-bottom:8px; }
+  .card p { color:var(--muted); font-size:.95rem; }
+  .price { display:inline-block; margin-top:14px; color:var(--accent); font-weight:700; font-size:.9rem; }
+
+  .feat { display:flex; gap:16px; align-items:flex-start; margin-bottom:22px; }
+  .feat .check { color:#0f172a; background:var(--accent); width:26px; height:26px; border-radius:50%; display:grid; place-items:center; font-weight:800; flex:0 0 26px; }
+  .feat h3 { font-size:1.05rem; margin-bottom:2px; }
+  .feat p { color:var(--muted); font-size:.93rem; }
+
+  .band { background:linear-gradient(90deg,var(--accent),var(--accent2)); border-radius:18px; padding:46px 26px; text-align:center; color:#0f172a; }
+  .band h2 { color:#0f172a; }
+  .band p { margin-bottom:22px; color:#0f172a; opacity:.8; }
+  .band .btn { background:#0f172a; color:#fff; }
+
+  footer { border-top:1px solid var(--border); padding:32px 0; text-align:center; color:var(--muted); font-size:.9rem; }
+  @media (max-width:720px){ .nav a:not(.btn){ display:none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">TuNegocio<span>.</span></div>
+    <div class="nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#porque">¿Por qué nosotros?</a>
+      <a href="#contacto" class="btn btn-small">Cotizar</a>
+    </div>
+  </nav>
+</div>
+
+<header class="hero wrap">
+  <span class="pill">✓ Atención el mismo día</span>
+  <h1>El servicio que tu<br /><em>casa merece</em></h1>
+  <p>Reparaciones, instalaciones y mantenimiento con garantía. Precio cerrado antes de empezar, sin sorpresas.</p>
+  <div class="hero-actions">
+    <a href="#contacto" class="btn">Pedir cotización gratis</a>
+    <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+  </div>
+</header>
+
+<section id="servicios" class="wrap">
+  <h2>Servicios</h2>
+  <p class="sub">Todo lo que necesitas, en un solo lugar</p>
+  <div class="grid">
+    <div class="card">
+      <div class="ico">🔧</div>
+      <h3>Reparaciones</h3>
+      <p>Fugas, instalaciones eléctricas y arreglos del hogar, resueltos en la visita.</p>
+      <span class="price">desde $20</span>
+    </div>
+    <div class="card">
+      <div class="ico">🏗️</div>
+      <h3>Instalaciones</h3>
+      <p>Montaje de aire acondicionado, lámparas, electrodomésticos y más.</p>
+      <span class="price">desde $30</span>
+    </div>
+    <div class="card">
+      <div class="ico">🛡️</div>
+      <h3>Mantenimiento</h3>
+      <p>Plan mensual revisión preventiva para que nada falle a la mala hora.</p>
+      <span class="price">$45 / mes</span>
+    </div>
+  </div>
+</section>
+
+<section id="porque" class="wrap">
+  <h2>¿Por qué elegirnos?</h2>
+  <p class="sub">Compromisos que cumplimos</p>
+  <div class="grid">
+    <div>
+      <div class="feat"><span class="check">✓</span><div><h3>Precio cerrado</h3><p>Sabes cuánto cuesta antes de que empecemos. Nunca hay cargos extra.</p></div></div>
+      <div class="feat"><span class="check">✓</span><div><h3>Garantía de 30 días</h3><p>Si algo vuelve a fallar, regresamos sin costo.</p></div></div>
+      <div class="feat"><span class="check">✓</span><div><h3>Llegamos puntual</h3><p>Cita con hora definida, no “te llamamos cuando podamos”.</p></div></div>
+    </div>
+    <div>
+      <div class="feat"><span class="check">✓</span><div><h3>Trabajo certificado</h3><p>Personal verificado y materiales de primera calidad.</p></div></div>
+      <div class="feat"><span class="check">✓</span><div><h3>Atención rápida</h3><p>Respondemos en menos de 2 horas en horario laboral.</p></div></div>
+      <div class="feat"><span class="check">✓</span><div><h3>Pago flexible</h3><p>Efectivo, transferencia o tarjeta. 50% al iniciar, 50% al entregar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="wrap">
+  <div class="band">
+    <h2>¿Necesitas ayuda hoy?</h2>
+    <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
+    <a class="btn" href="https://wa.me/50600000000">💬 WhatsApp: 0000-0000</a>
+  </div>
+</section>
+
+<footer>
+  <div><strong>TuNegocio</strong> · Av. Central 123, San José</div>
+  <div>Lun–Sáb 8:00–18:00 · © 2026</div>
+</footer>
+
+</body>
+</html>
